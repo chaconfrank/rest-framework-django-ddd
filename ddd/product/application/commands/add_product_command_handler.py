@@ -16,11 +16,11 @@ class AddProductCommand:
 class AddProductCommandHandler:
     def execute(self, command: AddProductCommand) -> Product:
         if isinstance(command, AddProductCommand):
-            return self._add_pet(command)
+            return self._add_product(command)
         else:
             raise ValueError("Command desconocido")
 
-    def _add_pet(self, command: AddProductCommand) -> Product:
+    def _add_product(self, command: AddProductCommand) -> Product:
 
         return ProductRepositoryImpl().create(
             price=command.price,
