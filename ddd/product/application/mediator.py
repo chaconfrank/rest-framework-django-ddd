@@ -10,7 +10,7 @@ class Mediator:
         if handler:
             return handler.execute(command)
         else:
-            raise ValueError("No handler found for the command")
+            raise ValueError("Not found handler for the command")
 
 
 mediator = Mediator()
