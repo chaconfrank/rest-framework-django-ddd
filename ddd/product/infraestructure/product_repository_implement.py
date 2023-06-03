@@ -1,12 +1,6 @@
-from abc import ABC
-
 from .abstract_repository_implement import AbstractRepositoryImpl
 from ..domain.model.product import Product
-from ..domain.repository.abstract_repository import AbstractRepository
-
-
-class ProductRepository(AbstractRepository, ABC):
-    pass
+from ..domain.repository.product_repository import ProductRepository
 
 
 class ProductRepositoryImpl(ProductRepository, AbstractRepositoryImpl):
