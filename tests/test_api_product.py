@@ -1,5 +1,4 @@
 import json
-
 import pytest
 
 from django.urls import reverse
@@ -13,7 +12,7 @@ class TestApiClient(APITestCase):
     def __int__(self):
         self.client = APIClient()
 
-    def test_create_pet(self):
+    def test_create_product(self):
         url = reverse('product:create')
         data = {'title': 'test', 'description': 'test', 'price': 12.2}
         response = self.client.post(url, data=json.dumps(data), content_type='application/json')
